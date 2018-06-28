@@ -1,0 +1,75 @@
+﻿
+@{
+	ViewBag.Title = "JqueryExercise";
+}
+
+<h2 id="hiddentitle">JqueryExercise</h2>
+<!--1. change color of title
+	2. change font size of title
+	3. move title to right side of the page-->
+
+
+<button onclick="myhideFunc()">JavaScript Hide</button><br />
+<button onclick="myjqueryhideFunc()">JQuery Hide</button><br />
+<button onclick="myjquerycolorFunc()">JQuery Title Color</button><br />
+<button onclick="myjqueryfontsizeFunc()">JQuery Font Size</button><br />
+<button onclick="myjquerymovetextFunc()">JQuery Move Text</button><br />
+
+<button onclick="myjquerycssFunc()">JQuery Move, Color and Size</button><br />
+
+<script src="~/Scripts/jquery-1.10.2.js"></script>
+
+<script>
+	function myhideFunc() {
+		document.getElementById("hiddentitle").style.display = "none";
+
+	}
+
+	//$(document).ready(
+	//	$("#mybtn").click(
+
+	function myjqueryhideFunc() {
+
+		$("#hiddentitle").toggle();
+	}
+
+
+	//)
+
+	//$("#mybtncolor").click(
+
+	function myjquerycolorFunc() {
+
+		$("#hiddentitle").css('color', 'blue');
+	}
+
+	function myjqueryfontsizeFunc() {
+
+		$("#hiddentitle").css('font-size', '40px');
+	}
+
+	function myjquerymovetextFunc() {
+
+		$("#hiddentitle").animate({"margin-left": "200px"});
+	}
+
+	function myjquerycssFunc() {
+
+		$("#hiddentitle").css({ "color": "blue", "margin-left": "500px", "font-size": "100px" });
+	}
+		//)
+		//$(function () {
+		//		$('.star').click(function () {
+		//			$(this).css('background', 'yellow');
+
+		//		});
+		//	});
+	//)
+
+
+</script>
+
+
+
+
+

@@ -1,0 +1,999 @@
+﻿@{
+	ViewBag.Title = "JavaScriptExcercise";
+}
+@*added bootstrp ref, how do i get rid of top nav bar*@
+<h2>
+	JavaScript Exercise<br />
+	<br />
+</h2>
+
+
+@*Add nav bar*@
+
+@*<link href="Content/bootstrap.css" rel="stylesheet" />
+	<style>
+		.h7 {
+			font-size: 2px;
+			color: aqua;
+		}
+
+		.well {
+			border-color: black;
+		}
+	</style>*@
+
+
+
+
+
+@*<div class="row">
+		<div class="col-md-12 well">
+			<h3>
+				Alarm Clock
+				<br />
+			</h3>
+		</div>
+
+	</div>
+
+	<body onload="startTime()">
+		<font size="10">
+			<div id="txt"></div>
+		</font>
+	</body>
+
+	<div class="row">
+		<div class="col-md-12 well">
+			<h3>
+				<input type="time" id="alarmTime" />
+
+				<input type="date" id="alarmDate" />
+				<br />
+				<br />
+				<input type="button" value="Set Alarm" onclick="alarm()" class="btn">
+				<br />
+
+				<br />
+			</h3>
+		</div>
+
+	</div>*@
+
+
+
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			Simple Addition and Division Calculation
+		</h3>
+		<br />
+
+		<h2>
+
+			( <input type="number" id="fNum" placeholder="Enter Number" /> + <input type="number" id="sNum" placeholder="Enter Number" /> ) / <input type="number" id="tNum" placeholder="Enter Number" /> = <text type="number" id="result"></text>
+			<br />
+			<br />
+			<input type="button" value="Calculate" onclick="calculator()" class="btn">
+			<br />
+		</h2>
+	</div>
+
+</div>
+<br />
+
+
+
+
+
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			Iteration of Numbers
+			<br />
+			<input type="number" id="starting" placeholder="Starting Number" /> @*I should add error message if first number is higher than ending number!*@
+
+			<input type="number" id="ending" placeholder="Ending Number" /><br />
+			<br />
+			<input type="button" value="Iterate" onclick="iterator()" class="btn">
+			<br />
+			<text type="number" id="iteratorResult"> </text>
+			<br />
+			<br />
+
+		</h3>
+	</div>
+
+</div>
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			Simple Math Functions
+			<br />
+			<input type="number" id="1Num" placeholder="First Number" />  <input type="number" id="2Num" placeholder="Second Number" />  <input type="number" id="3Num" placeholder="Third Number" />  <input type="number" id="4Num" placeholder="Fourth Number" />  <input type="number" id="5Num" placeholder="Fifth Number" />
+			<br />
+			<br />
+			<input type="button" value="Lowest Number" onclick="findLeast()" class="btn"> = <text id="resultL"></text>
+			<br />
+			<br />
+			<input type="button" value="Highest Number" onclick="findGreatest()" class="btn"> = <text id="resultG"></text>
+			<br />
+			<br />
+			<input type="button" value="Mean" onclick="findMean()" class="btn"> = <text id="resultM"></text>
+			<br />
+			<br />
+			<input type="button" value="Sum" onclick="findSum()" class="btn"> = <text id="resultS"></text>
+			<br />
+			<br />
+			<input type="button" value="Product" onclick="findProduct()" class="btn"> = <text id="resultP"></text>
+			<br />
+			<br />
+
+		</h3>
+	</div>
+
+</div>
+
+
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			Find Factorial
+			<br />
+			<br />
+			<input type="number" id="1Fact" placeholder="Enter Number" /><br />
+			<br />
+			<br />
+			<input type="button" value="Find Factorial" onclick="findFactorial()" class="btn"> = <text id="resultF"></text>
+
+
+			<br />
+			<br />
+
+		</h3>
+	</div>
+
+</div>
+
+
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			FizzBuzz Exercise
+			<br />
+			<br />
+			<h4>Input number between 1 to 100 for both boxes.</h4>
+			<br />
+			<input type="number" id="1FizzBuzz" placeholder="Enter Number" /> 	<input type="number" id="2FizzBuzz" placeholder="Enter Number" /><br />
+			<br />
+			<br />
+			<input type="button" value="Generate FizzBuzz" onclick="genFizzBuzz()" class="btn">
+			<br />
+			<br />
+			<text id="resultFizzBuzz"></text>
+
+		</h3>
+	</div>
+
+</div>
+
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			Palindrome Check
+			<br />
+			<input type="text" id="word" value="" placeholder="Enter Text"><br>
+			<br />
+			<input type="button" value="Reverse Text" onclick="strReverse()" class="btn"><br>
+			<br />
+			<input type="text" id="resultText2" placeholder="Result" />
+
+			<br />
+			<text type="text" id="resultPalindrome"> </text>
+			<br />
+		</h3>
+	</div>
+
+</div>
+
+
+
+
+
+
+
+<br />
+<h4>Print all combinations of a string.</h4>
+<br />
+@*<input type="text" id="string1" value="" placeholder="Enter String"><br>
+	<br />
+
+	<input type="button" value="String Combinations" onclick="strCombination()" class="btn"><br>
+	<br />
+	<br />
+	<p type="text" id="resultCombo"> </p>*@
+
+<br />
+<input type="text" id="string5" value="" placeholder="Enter String"><br>
+<br />
+
+<input type="button" value="String Combinations 5" onclick="strCombination5()" class="btn"><br>
+<br />
+<br />
+<p type="text" id="resultCombo5"> </p>
+
+
+<br />
+<input type="text" id="string1" value="" placeholder="Enter String"><br>
+<br />
+
+<input type="button" value="String Combinations 2" onclick="strCombination()" class="btn"><br>
+<br />
+<br />
+<p type="text" id="resultCombo2"> </p>
+
+
+@*Write a function that prints all combinations of a string.
+	Example string : 'pie'
+	Expected Output : p,pi,pie,i,ie,e*@
+
+
+<br />
+<input type="text" id="string10" value="" placeholder="Enter String"><br>
+<br />
+
+<input type="button" value="Alphabetical" onclick="strAlphabetical()" class="btn"><br>
+<br />
+<br />
+<p type="text" id="resultStrAlph"> </p>
+
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			Capitalize Each Word
+			<br />
+			<br />
+			<input type="text" id="string20" value="" placeholder="Enter String"><br>
+			<br />
+
+			<input type="button" value="Capitalize" onclick="strUpCas()" class="btn"><br>
+			<br />
+			<text type="text" id="resultUpCas"> </text>
+
+			<br />
+			<br />
+
+		</h3>
+	</div>
+
+</div>
+
+
+
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			Find First Character that Does Not Repeat
+			<br />
+			<input type="text" id="string30" value="" placeholder="Enter String"><br>
+			<br />
+
+			<input type="button" value="Result" onclick="strNotRepeat()" class="btn">  <text type="text" id="resultNotRepeat"> </text>
+			<br />
+			<br />
+
+		</h3>
+	</div>
+
+</div>
+
+
+
+
+
+<div class="row">
+	<div class="col-md-12 well">
+		<h3>
+			Generate Random ID
+			<br />
+			<input type="number" id="stringId" value="" placeholder="Enter Number"><br>
+			<br />
+
+			<input type="button" value="Generate ID" onclick="strRanId()" class="btn">    <text type="string" id="resultRanId"> </text>
+			<br />
+
+		</h3>
+	</div>
+
+</div>
+
+
+<div class="row">
+    <div class="col-md-12 well">
+        <h3>
+            Return the largest consectutive letters(words) in the sentence. If there are two or more words that are the same length, return the first word from the string with that length. Ignore punctuation and assume sentence will not be empty.
+            <br />
+            <input type="string" id="stringLongestWord" value="" placeholder="Enter sentence"><br>
+            <br />
+
+            <input type="button" value="Find Longest Word" onclick="LongestWord()" class="btn">    <text type="string" id="resultLongestWord"> </text>
+            <br />
+
+        </h3>
+    </div>
+
+</div>
+
+
+
+
+<div class="row">
+    <div class="col-md-12 well">
+        <h3>
+            Numbers in a string add up to 10 with three question marks between numbers.
+            <br />
+            <input type="number" id="stringQuestionMarks" value="" placeholder="Enter Number"><br>
+            <br />
+
+            <input type="button" value="Enter string with numbers and questions marks" onclick="QuestionsMarks()" class="btn">    <text type="string" id="resultQuestionMarks"> </text>
+            <br />
+
+        </h3>
+    </div>
+
+</div>
+
+
+<script>
+
+
+	//function startTime() {
+	//	var today = new Date();
+	//	var alarmT = document.getElementById('alarmTime').value;
+
+	//	//var weekday = today.getDay();
+	//	//var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+	//	////var d1 = new Date(weekday);
+	//	//var dayName = days[weekday];
+
+	//	//var d = today.getDate();
+
+	//	//var month = today.getMonth();
+	//	//var month1 = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+	//	////var m1 = new Date(month);
+	//	//var monthName = month1[month];
+
+	//	var h = today.getHours();
+	//	var m = today.getMinutes();
+	//	var s = today.getSeconds();
+	//	m = addZero(m);
+	//	s = addZero(s);
+	//	document.getElementById('txt').innerHTML =
+	//		/*dayName + ", " + d + " " + monthName + " " +*/ h + ":" + m + ":" + s;
+	//	var t = setTimeout(startTime, /*500*/);
+	//}
+	//function addZero(i) {
+	//	if (i < 10) { i = "0" + i };  // add zero in front of numbers < 10
+	//	return i;
+
+	//}
+
+
+	//<input type="time" id="alarmTime" />
+
+	//	<input type="date" id="alarmDate" />
+	//	<br />
+	//	<br />
+	//	<input type="button" value="Set Alarm" onclick="alarm()" class="btn" />
+	//	<br />
+
+
+	//function alarm() {
+	//	var alarmT = Date(document.getElementById("alarmTime").value);
+	//	//var alarmD = Date(document.getElementById("alarmDate").value);
+
+	//	var currentTime = new Time();
+	//	//var currentDate = new Date();
+
+
+	//	if (alarmT == currentTime /*&& alarmD == currentDate*/) {
+	//		//sound.play();
+	//		alert("Alarm! Alarm!");
+
+	//	}
+
+	//}
+
+
+
+
+
+
+
+	function calculator() {
+		var value1 = Number(document.getElementById("fNum").value);
+		var value2 = Number(document.getElementById("sNum").value);
+		var value3 = Number(document.getElementById("tNum").value);
+
+		document.getElementById("result").innerHTML = ((value1 + value2) / value3).toFixed(3);
+
+	}
+
+	function iterator() {
+		var value1 = Number(document.getElementById("starting").value);
+		var value2 = Number(document.getElementById("ending").value);
+		var result = "";
+		for (var i = value1; i <= value2; i++/*plus one*/) {
+			result += i + " ";
+		}
+		document.getElementById("iteratorResult").innerHTML = result;
+	}
+
+
+
+	function findLeast() {
+		var value1 = Number(document.getElementById("1Num").value);
+		var value2 = Number(document.getElementById("2Num").value);
+		var value3 = Number(document.getElementById("3Num").value);
+		var value4 = Number(document.getElementById("4Num").value);
+		var value5 = Number(document.getElementById("5Num").value);
+
+		var resultLeast = Math.min(value1, value2, value3, value4, value5);
+
+		document.getElementById("resultL").innerHTML = resultLeast;
+	}
+
+	function findGreatest() {
+		var value1 = Number(document.getElementById("1Num").value);
+		var value2 = Number(document.getElementById("2Num").value);
+		var value3 = Number(document.getElementById("3Num").value);
+		var value4 = Number(document.getElementById("4Num").value);
+		var value5 = Number(document.getElementById("5Num").value);
+
+		var resultGreatest = Math.max(value1, value2, value3, value4, value5);
+
+		document.getElementById("resultG").innerHTML = resultGreatest;
+	}
+
+	function findMean() {
+
+		var a = parseInt(document.getElementById("1Num").value);
+		var b = parseInt(document.getElementById("2Num").value);
+		var c = parseInt(document.getElementById("3Num").value);
+		var d = parseInt(document.getElementById("4Num").value);
+		var e = parseInt(document.getElementById("5Num").value);
+
+		//var a = $("#one").val();
+
+		var resultMean = ((a + b + c + d + e) / 5);
+		document.getElementById('resultM').innerHTML = resultMean;
+	}
+
+
+
+	//var resultMean = (value1 + value2 + value3 + value4 + value5) / arguments.length; Ha! Got infinity with this one!
+
+	//		<input type="text" id="one">
+	//			<input type="text" id="two">
+
+	//				<input type="button" onclick="average()" value="average">
+	//					<input type="text" id="avg">
+	//						<script type"text/javascript">>
+
+    
+	function findSum() {
+		var value1 = Number(document.getElementById("1Num").value);
+		var value2 = Number(document.getElementById("2Num").value);
+		var value3 = Number(document.getElementById("3Num").value);
+		var value4 = Number(document.getElementById("4Num").value);
+		var value5 = Number(document.getElementById("5Num").value);
+
+
+		var resultSum = value1 + value2 + value3 + value4 + value5;
+
+
+		document.getElementById("resultS").innerHTML = resultSum;
+
+	}
+
+	function findProduct() {
+		var value1 = Number(document.getElementById("1Num").value);
+		var value2 = Number(document.getElementById("2Num").value);
+		var value3 = Number(document.getElementById("3Num").value);
+		var value4 = Number(document.getElementById("4Num").value);
+		var value5 = Number(document.getElementById("5Num").value);
+
+
+		var resultProduct = value1 * value2 * value3 * value4 * value5;
+
+
+		document.getElementById("resultP").innerHTML = resultProduct;
+
+	}
+
+
+	function findFactorial() {
+		var value1 = Number(document.getElementById("1Fact").value);
+
+		if (value1 === 0 || value1 === 1) {
+			value1 = 1;
+		}
+
+		document.getElementById("resultF").innerHTML = value1;
+		//return 1;
+
+
+		for (var i = value1 - 1; i >= 1; i--) {
+			value1 *= i;
+		}
+		document.getElementById("resultF").innerHTML = value1;
+
+	}
+
+
+
+	function genFizzBuzz() {
+		var value1 = Number(document.getElementById("1FizzBuzz").value);
+		var value2 = Number(document.getElementById("2FizzBuzz").value);
+		//var resultNotInRange = "";
+
+		var resultN = "";
+
+		for (var i = 1; i <= 100; i++) {
+			if (i % value1 === 0 && i % value2 === 0) {
+				resultN += "FizzBuzz ";
+
+			}
+			//document.getElementById("resultFizzBuzz").innerHTML = resultFB;
+
+			else if (i % value1 === 0) {
+				resultN += "Fizz ";
+			}
+			//document.getElementById("resultFizzBuzz").innerHTML = resultF;
+
+			else if (i % value2 === 0) {
+				resultN += "Buzz ";
+			}
+			//document.getElementById("resultFizzBuzz").innerHTML = resultB;
+
+			else /*(i % value1 != 0 && i % value2 != 0)*/ { /*did not need the argument since using else statement. just need else { resultN += i + " "; }*/
+				resultN += i + " ";
+			}
+
+			//just need one line, LOOKUP concatonating!!!!!
+		}
+		document.getElementById("resultFizzBuzz").innerHTML = resultN;
+	}
+
+
+	function strReverse() {
+
+		var pstr = document.getElementById('word').value;
+
+
+		pstr = pstr.replace(/\s/g, '');
+
+
+
+		var pstr2 = "";
+		for (i = (pstr.length) - 1; i >= 0; i--) {
+			pstr2 += pstr[i];
+
+
+		}
+
+		var result2 = document.getElementById('resultText2');
+		result2.value = pstr2;
+
+		var isPalindrome = document.getElementById('word').value;
+
+		isPalindrome = isPalindrome.toLowerCase().replace(/\s/g, '');
+
+
+
+		{
+			if (isPalindrome == isPalindrome.split('').reverse().join('')) {
+				document.getElementById("resultPalindrome").innerHTML = isPalindrome + " is a palindrome.";
+			}
+			else {
+				document.getElementById("resultPalindrome").innerHTML = isPalindrome + " is not a palindrome.";
+			}
+
+		}
+
+		//was it a car or a cat i saw
+
+
+
+
+
+
+	}
+
+	//<input type= "text" id= "string1" value= "" placeholder= "Enter String" > <br>
+	//	<br />
+
+	//	<input type="button" value="String Combinations" onclick="strCombination()" class="btn"><br>
+	//		<br />
+
+	//function strCombination() {
+
+	//	var pstr = document.getElementById('string1').value;
+
+
+	//	pstr = pstr.replace(/\s+/g, '');
+
+
+	//	var pstr2 = "";
+	//	for (i = (pstr.length) - 1; i >= 0; i--) {
+	//		pstr2 += pstr[i];
+	//	}
+
+	//	var result2 = document.getElementById('resultCombo');
+	//	result2.value = pstr2;
+	//}
+
+
+
+
+	//	<input type="text" id="string5" value="" placeholder="Enter String"><br>
+	//		<br />
+
+	//		<input type="button" value="String Combinations 5" onclick="strCombination5()" class="btn"><br>
+	//			<br />
+	//			<br />
+	//			<p type="text" id="resultCombo5"> </p>
+
+
+	function strCombination5() {
+		var str1 = document.getElementById("string5");
+		var array1 = [];
+		for (var x = 0, y = 1; x < str1.length; x++ , y++) {
+			array1[x] = str1.substring(x, y);
+		}
+		var combi = [];
+		var temp = "";
+		var slent = Math.pow(2, array1.length);
+
+		for (var i = 0; i < slent; i++) {
+			temp = "";
+			for (var j = 0; j < array1.length; j++) {
+				if ((i & Math.pow(2, j))) {
+					temp += array1[j];
+				}
+			}
+			if (temp !== "") {
+				combi.push(temp);
+			}
+		}
+		document.getElementById("resultCombo5") = combi.join("\n");
+		//console.log(combi.join("\n"));
+	}
+
+	//substrings("dog"); Have not finished this one!!!!
+
+
+
+
+
+
+
+
+	function* permute(string1, n = a.length) {
+		if (n <= 1) yield a.slice();
+		else for (let i = 0; i < n; i++) {
+			yield* permute(a, n - 1);
+			const j = n % 2 ? 0 : i;
+			[a[n - 1], a[j]] = [a[j], a[n - 1]];
+		}
+	}
+
+	console.log(Array.from(permute("resultCombo2".split(''))).map(perm => perm.join('')));
+
+
+
+	/**/
+	/**/
+@*Write a function that prints all combinations of a string.
+	Example string : 'pie'
+	Expected Output : p,pi,pie,i,ie,e*@
+	/**/
+	/**/
+
+
+
+
+
+	//	<input type="text" id="string10" value="" placeholder="Enter String"><br>
+	//		<input type="button" value="Alphabetical" onclick="strAlphabetical()" class="btn"><br>
+
+	//			<p type="text" id="resultStrAlph"> </p>
+
+	function strAlphabetical() {
+		var stralpha = document.getElementById('string10').value;
+
+		stralpha = stralpha.toLowerCase().replace(/\s+/g, '');
+
+		stralpha2 = stralpha.split('').sort().join('');
+
+		document.getElementById("resultStrAlph").innerHTML = stralpha2;
+	}
+
+
+	//Write a function that outputs a passed string with letters in alphabetical order.
+	//Example string : 'webmaster'
+	//Expected Output : 'abeemrstw'
+	//Assume punctuation and numbers symbols are not included in the passed string.
+
+
+	//<br />
+	//	<input type="text" id="string20" value="" placeholder="Enter String"><br>
+	//		<br />
+
+	//		<input type="button" value="First Letter UpperCase" onclick="strUpCas()" class="btn"><br>
+	//			<br />
+	//			<br />
+	//			<p type="text" id="resultUpCas"> </p>
+
+
+	//function strUpCas() {
+	//	var strcas = document.getElementById('string20').value;
+
+	//	strcas = strcas.replace(/\w\S*/g, strcas[0].toUpperCase());
+
+
+
+	//	//sort array and apply strcas[0].toUpperCase() to each array object
+
+	//	//	return string.replace(/^./, string[0].toUpperCase());
+
+
+
+	//	document.getElementById("resultUpCas").innerHTML = strcas;
+	//}
+
+	function strUpCas(str) {
+		var str = document.getElementById('string20').value;
+		str = str.split(" ");
+
+		for (var i = 0, x = str.length; i < x; i++) {
+			str[i] = str[i][0].toUpperCase() + str[i].substr(1);
+		}
+		document.getElementById("resultUpCas").innerHTML = str.join(" ");
+		//return str.join(" ");
+	}
+	//OK I DON"T FULLY UNDERSTAND THE FOR LOOP ABOVE!!!!!!
+
+	//Write a function that accepts a string as a parameter and converts the first letter
+	//of each word of the string in upper case.
+	//Example string : 'the quick brown fox'
+	//Expected Output : 'The Quick Brown Fox '
+
+
+	//<br />
+	//	<input type="text" id="string30" value="" placeholder="Enter String"><br>
+	//		<br />
+
+	//		<input type="button" value="First Not Repeat Letter" onclick="strNotRepeat()" class="btn"><br>
+	//			<br />
+	//			<br />
+	//			<p type="text" id="resultNotRepeat"> </p>
+
+	function strNotRepeat() {
+		var str = document.getElementById('string30').value;
+
+		var arra1 = str.split('');
+		var result = ''; 
+		var ctr = 0;
+
+		for (var x = 0; x < arra1.length; x++) {
+			ctr = 0;
+
+			for (var y = 0; y < arra1.length; y++) {
+				if (arra1[x] === arra1[y]) {
+					ctr += 1;
+				}
+			}
+
+			if (ctr < 2) {
+				result = arra1[x];
+				break;
+			}
+		}
+		//return result;
+		document.getElementById("resultNotRepeat").innerHTML = result;
+	}
+	//console.log(find_FirstNotRepeatedChar('abacddbec'));
+
+
+
+
+	//Write a function to find the first not repeated character.
+	//Sample arguments : 'abacddbec'
+	//Expected output : 'e'
+
+
+
+
+
+
+
+
+	//<br />
+	//	<input type="number" id="stringId" value="" placeholder="Enter Number"><br>
+	//		<br />
+
+	//		<input type="button" value="Enter Random ID Length" onclick="strRanId()" class="btn"><br>
+	//			<br />
+	//			<br />
+	//			<p type="string" id="resultRanId"> </p>
+
+
+
+
+
+
+	function strRanId() {
+		var l = document.getElementById('stringId').value;
+
+		var text = "";
+		var char_list = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+		for (var i = 0; i < l; i++) {
+			text += char_list.charAt(Math.floor(Math.random() * char_list.length));
+
+
+			//The String object's charAt() method returns a new string consisting of the single UTF-16 code unit located at the specified offset into the string.
+			/*A number representing the largest integer less than or equal to the specified number.*/
+			//The Math.random() function returns a floating- point, pseudo - random number in the range from 0 inclusive up to but not including 1 — which you can then scale to your desired range.The implementation selects the initial seed to the random number generation algorithm; it cannot be chosen or reset by the user.
+
+		}
+
+		document.getElementById('resultRanId').innerHTML = text;
+
+	}
+
+
+
+
+
+    //Challenge
+    //Using the C# language, have the function LongestWord(sen) take the sen parameter being passed and return the largest word in the string.If there are two or more words that are the same length, return the first word from the string with that length.Ignore punctuation and assume sen will not be empty.
+    //Sample Test Cases
+    //Input: "fun&!! time"
+
+    //Output: "time"
+
+
+    //Input: "I love dogs"
+
+    //Output: "love"
+
+    //<input type="number" id="stringLongestWord" value="" placeholder="Enter sentence"><br>
+    //    <br />
+
+    //    <input type="button" value="Enter sentence (can have special characters)" onclick="LongestWord()" class="btn">    <text type="string" id="resultLongestWord"> </text>
+    //        <br />
+    function LongestWord() {
+        var sentence = document.getElementById('stringLongestWord').value;
+        
+        // we use the regex match function which searches the string for the
+        // pattern and returns an array of strings it finds
+        // in our case the pattern we define below returns words with
+        // only the characters a through z and 0 through 9, stripping away punctuation
+        // e.g. "hello$% ##all" becomes [hello, all]
+        var arr = sentence.match(/[a-z0-9]+/gi);
+
+        // the array sort function takes a function as a parameter
+        // which is used to compare each element in the array to the
+        // next element in the array
+        var sorted = arr.sort(function (a, b) {
+            return b.length - a.length;
+        });
+
+        // this array now contains all the words in the original
+        // string but in order from longest to shortest length
+        // so we simply return the first element
+        //return sorted[0];
+
+        document.getElementById('resultLongestWord').innerHTML = sorted[0];
+    }
+
+   
+
+
+
+	//Write a function that generates a string id (specified length) of random
+	//characters.
+	//Sample character list :
+	//"ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz012345678
+	//9"
+
+
+    //Sample Test Cases
+    //Input: "aa6?9"
+
+    //Output: "false"
+
+
+    //Input: "acc?7??sss?3rr1??????5"
+
+    //Output: "true"
+//    <div class="row">
+//        <div class="col-md-12 well">
+//            <h3>
+//                Numbers in a string add up to 10 with three question marks between numbers.
+//            <br />
+//                <input type="number" id="stringQuestionMarks" value="" placeholder="Enter Number"><br>
+//                    <br />
+
+//                    <input type="button" value="Enter string with numbers and questions marks" onclick="QuestionsMarks()" class="btn">    <text type="string" id="resultQuestionMarks"> </text>
+//                        <br />
+
+//        </h3>
+//    </div>
+
+//</div>
+
+
+    function QuestionsMarks(str) {
+        let numPlaces = [];
+        //presumption of false, until flag is turned true
+        let flag = false;
+
+        //get an array of places in string holding integers
+        for (let i = 0, len = str.length; i < len; i++) {
+            if (/\d/.test(str[i])) {
+                numPlaces.push(i);
+            }
+        }
+
+        let numCount = numPlaces.length;
+
+        for (let i = 0; i < numCount - 1; i++) {
+            if (parseInt(str[numPlaces[i]], 10) + parseInt(str[numPlaces[i + 1]], 10) === 10) {
+                flag = true;
+                let strSeg = str.slice(numPlaces[i], numPlaces[i + 1]);
+
+                strSeg = strSeg.replace(/[^\?]/g, '');
+                if (strSeg !== '???') {
+                    return false;
+                }
+            }
+        }
+        return flag;
+    }
+
+    // keep this function call here 
+    QuestionsMarks(readline());
+
+
+
+
+</script>
+
+
+
+<script src="Scripts/bootstrap.js"></script>
+<script src="~/Scripts/jquery-1.10.2.js"></script> @*I don't have this file under script folder in solution explorer*@
+<script>$("div.navbar-fixed-top").autoHidingNavbar('hide');</script>
+
+
+
+@*function fizzbuzz() {
+	var fval = Number(fizzNum.value);
+	var bval = Number(buzzNum.value);
+	var result ="";
+
+	for (var i = 1; i <= 100; i++)
+	{
+		if(i % fval === 0 )
+		result += i;*@
+
+
