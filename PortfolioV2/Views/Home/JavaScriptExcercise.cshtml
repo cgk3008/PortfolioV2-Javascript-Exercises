@@ -351,6 +351,26 @@
 <div class="row">
     <div class="col-md-12 well">
         <h3>
+            Using the JavaScript language, have the function ScaleBalancing(strArr) read strArr which will contain two elements, the first being the two positive integer weights on a balance scale (left and right sides) and the second element being a list of available weights as positive integers. Your goal is to determine if you can balance the scale by using the least amount of weights from the list, but using at most only 2 weights. For example: if strArr is ["[5, 9]", "[1, 2, 6, 7]"] then this means there is a balance scale with a weight of 5 on the left side and 9 on the right side. It is in fact possible to balance this scale by adding a 6 to the left side from the list of weights and adding a 2 to the right side. Both scales will now equal 11 and they are perfectly balanced. Your program should return a comma separated string of the weights that were used from the list in ascending order, so for this example your program should return the string 2,6
+
+            There will only ever be one unique solution and the list of available weights will not be empty. It is also possible to add two weights to only one side of the scale to balance it. If it is not possible to balance the scale then your program should return the string not possible.
+            <br />
+            <input type="int" id="scaleBalance" value="" placeholder="Enter weights ("[3,4]","[1,2,7,7]" "><br>
+            <br />
+
+            <input type="button" value="Find Balance" onclick="ScaleBalance()" class="btn">    <text type="string" id="resultScaleBalance"> </text>
+            <br />
+
+        </h3>
+    </div>
+
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-12 well">
+        <h3>
             Numbers in a string add up to 10 with three question marks between numbers.
             <br />
             <input type="number" id="stringQuestionMarks" value="" placeholder="Enter Number"><br>
@@ -937,16 +957,56 @@
 
         var resultConvertHours = Math.floor(convertHour / 60) + ":" + remainder;
 
-
-
-      
-
         document.getElementById('resultConvertHours').innerHTML = resultConvertHours;
     }
 
 
+    //<input type="int" id="scaleBalance" value="" placeholder="Enter weights ("[3, 4]","[1, 2, 7, 7]" " > <br>
+    //    <br />
 
+    //    <input type="button" value="Find Balance" onclick="ScaleBalance()" class="btn">    <text type="string" id="resultScaleBalance"> </text>
 
+    function ScaleBalance() {
+
+        var strArr = Number(document.getElementById("scaleBalance").value);
+        //convert the array to something more workable
+        let newArr = strArr.map(val => {
+            return val.replace(/[\[\]]/g, "").split(',').map(val2 => {
+                return parseInt(val2, 10);
+            }).sort((a, b) => {
+                return a - b;
+            });
+        });
+
+        let diff = newArr[0][1] - newArr[0][0];
+        let weights = newArr[1];
+
+        //do the single-weight solution test
+        if (weights.includes(diff)) {
+            resultScaleBalance =  diff.toString();
+        }
+        //do the two-weights, one-side test
+        let weight1 = weights.find((val, ind) => {
+            let newWeights = weights.slice(0);
+            newWeights.splice(ind, 1);
+            resultScaleBalance =  newWeights.includes(diff - val)
+        });
+        if (weight1) {
+            resultScaleBalance =  `${weight1},${diff - weight1}`
+        }
+        //do the twp-weights, different sides, test
+        weight1 = weights.find(val => {
+            resultsScaleBalance = weights.includes(diff + val);
+        });
+        if (weight1) {
+            resultScaleBalance =  `${weight1},${diff + weight1}`
+        }
+        //if nothing is returned yet . . .
+        resultScaleBalance =  "Not possible";
+
+        document.getElementById('resultScaleBalance').innerHTML = resultScaleBalance;
+
+    }
 
 
 
