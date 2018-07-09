@@ -82,7 +82,21 @@
 </div>
 <br />
 
+<div class="row">
+    <div class="col-md-12 well">
+        <h3>
+           Swap two numbers.
+            <br />
+            <input type="number" id="swapNumbers" value="" placeholder="Enter two numbers with comma (" [3,4] "><br>
+            <br />
 
+            <input type="button" value="Swap" onclick="SwapNumbers()" class="btn">    <text type="string" id="resultSwapNumber"> </text>
+            <br />
+
+        </h3>
+    </div>
+
+</div>
 
 
 
@@ -355,7 +369,7 @@
 
             There will only ever be one unique solution and the list of available weights will not be empty. It is also possible to add two weights to only one side of the scale to balance it. If it is not possible to balance the scale then your program should return the string not possible.
             <br />
-            <input type="int" id="scaleBalance" value="" placeholder="Enter weights ("[3,4]","[1,2,7,7]" "><br>
+            <input type="number" id="scaleBalance" value="" placeholder="Enter weights ("[3,4]","[1,2,7,7]" "><br>
             <br />
 
             <input type="button" value="Find Balance" onclick="ScaleBalance()" class="btn">    <text type="string" id="resultScaleBalance"> </text>
@@ -458,7 +472,15 @@
 
 		document.getElementById("result").innerHTML = ((value1 + value2) / value3).toFixed(3);
 
-	}
+    }
+
+    //<input type="number" id="swapNumbers" value="" placeholder="Enter two numbers with comma (" [3, 4] "><br>
+    //    < br />
+
+    //    <input type="button" value="Swap" onclick="SwapNumbers()" class="btn">    <text type="string" id="resultSwapNumber"> </text>
+    //        <br />
+
+    function SwapNumbers
 
 	function iterator() {
 		var value1 = Number(document.getElementById("starting").value);
