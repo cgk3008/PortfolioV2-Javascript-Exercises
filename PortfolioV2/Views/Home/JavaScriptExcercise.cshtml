@@ -1033,6 +1033,53 @@
 
 
 
+    function ScaleBalancing(strArr) {
+        var weights = strArr[1].match(/\d+/g).map(Number);
+        var weightsOnScale = strArr[0].match(/\d+/g).map(Number);
+        var leftWeight = weightsOnScale[0];
+        var rightWeight = weightsOnScale[1];
+
+        // try only one weight    
+        for (var i = 0; i < weights.length; i++) {
+            if (leftWeight < rightWeight) {
+                if (leftWeight + weights[i] === rightWeight)
+                    return weights[i];
+            } else {
+                if (leftWeight === rightWeight + weights[i])
+                    return weights[i];
+            }
+        }
+        // now try two weights            
+        for (var i = 0; i < weights.length; i++) {
+            for (var j = i + 1; j < weights.length; j++) {
+                // add one on each side
+                if (leftWeight + weights[i] === rightWeight + weights[j]) {
+                    return weights[i] + ',' + weights[j];
+                } else if (leftWeight + weights[j] === rightWeight + weights[i]) {
+                    return weights[i] + ',' + weights[j];
+                }
+                // add two on the lighter side
+                if (leftWeight < rightWeight) {
+                    if (leftWeight + weights[i] + weights[j] === rightWeight) {
+                        return weights[i] + ',' + weights[j];
+                    }
+                } else {
+                    if (leftWeight === rightWeight + weights[i] + weights[j]) {
+                        return weights[i] + ',' + weights[j];
+                    }
+                }
+            }
+        }
+
+        // no solution
+        return 'not possible';
+    }
+
+    // keep this function call here 
+    ScaleBalancing(readline());
+
+
+
 
 	//Write a function that generates a string id (specified length) of random
 	//characters.
