@@ -653,6 +653,7 @@
     </Content>
     <Content Include="Views\Home\JavaScriptExcercise.cshtml" />
     <Content Include="Views\Home\JqueryExercise.cshtml" />
+    <Content Include="Views\Home\Zombie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

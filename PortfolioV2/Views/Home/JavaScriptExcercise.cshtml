@@ -1,83 +1,105 @@
 ﻿@{
-	ViewBag.Title = "JavaScriptExcercise";
+    ViewBag.Title = "JavaScriptExcercise";
 }
 @*added bootstrp ref, how do i get rid of top nav bar*@
 <h2>
-	JavaScript Exercise<br />
-	<br />
+    JavaScript Exercise<br />
+    <br />
 </h2>
 
 
 @*Add nav bar*@
 
 @*<link href="Content/bootstrap.css" rel="stylesheet" />
-	<style>
-		.h7 {
-			font-size: 2px;
-			color: aqua;
-		}
+    <style>
+        .h7 {
+            font-size: 2px;
+            color: aqua;
+        }
 
-		.well {
-			border-color: black;
-		}
-	</style>*@
+        .well {
+            border-color: black;
+        }
+    </style>*@
 
 
 
 
 
 @*<div class="row">
-		<div class="col-md-12 well">
-			<h3>
-				Alarm Clock
-				<br />
-			</h3>
-		</div>
+        <div class="col-md-12 well">
+            <h3>
+                Alarm Clock
+                <br />
+            </h3>
+        </div>
 
-	</div>
+    </div>
 
-	<body onload="startTime()">
-		<font size="10">
-			<div id="txt"></div>
-		</font>
-	</body>
+    <body onload="startTime()">
+        <font size="10">
+            <div id="txt"></div>
+        </font>
+    </body>
 
-	<div class="row">
-		<div class="col-md-12 well">
-			<h3>
-				<input type="time" id="alarmTime" />
+    <div class="row">
+        <div class="col-md-12 well">
+            <h3>
+                <input type="time" id="alarmTime" />
 
-				<input type="date" id="alarmDate" />
-				<br />
-				<br />
-				<input type="button" value="Set Alarm" onclick="alarm()" class="btn">
-				<br />
+                <input type="date" id="alarmDate" />
+                <br />
+                <br />
+                <input type="button" value="Set Alarm" onclick="alarm()" class="btn">
+                <br />
 
-				<br />
-			</h3>
-		</div>
+                <br />
+            </h3>
+        </div>
 
-	</div>*@
+    </div>*@
+
 
 
 
 
 <div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			Simple Addition and Division Calculation
-		</h3>
-		<br />
+    <div class="col-md-12 well">
+        <h3>
+            Current Day and Time
+        </h3>
+        <br />
 
-		<h2>
+        <h2>
 
-			( <input type="number" id="fNum" placeholder="Enter Number" /> + <input type="number" id="sNum" placeholder="Enter Number" /> ) / <input type="number" id="tNum" placeholder="Enter Number" /> = <text type="number" id="result"></text>
-			<br />
-			<br />
-			<input type="button" value="Calculate" onclick="calculator()" class="btn">
-			<br />
-		</h2>
-	</div>
+            @*( <input type="number" id="fNum" placeholder="Enter Number" /> + <input type="number" id="sNum" placeholder="Enter Number" /> ) / <input type="number" id="tNum" placeholder="Enter Number" /> =*@ <text type="string" id="currentDateTime"></text>
+            <br />
+            <br />
+            <input type="button" value="Day and Time" onclick="currentDayTime()" class="btn">
+            <br />
+        </h2>
+    </div>
+
+</div>
+<br />
+
+
+<div class="row">
+    <div class="col-md-12 well">
+        <h3>
+            Simple Addition and Division Calculation
+        </h3>
+        <br />
+
+        <h2>
+
+            ( <input type="number" id="fNum" placeholder="Enter Number" /> + <input type="number" id="sNum" placeholder="Enter Number" /> ) / <input type="number" id="tNum" placeholder="Enter Number" /> = <text type="number" id="result"></text>
+            <br />
+            <br />
+            <input type="button" value="Calculate" onclick="calculator()" class="btn">
+            <br />
+        </h2>
+    </div>
 
 </div>
 <br />
@@ -85,7 +107,7 @@
 <div class="row">
     <div class="col-md-12 well">
         <h3>
-           Swap two numbers.
+            Swap two numbers.
             <br />
             <input type="number" id="swapNumbers" value="" placeholder="Enter two numbers with comma (" [3,4] "><br>
             <br />
@@ -102,116 +124,116 @@
 
 
 <div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			Iteration of Numbers
-			<br />
-			<input type="number" id="starting" placeholder="Starting Number" /> @*I should add error message if first number is higher than ending number!*@
+    <div class="col-md-12 well">
+        <h3>
+            Iteration of Numbers
+            <br />
+            <input type="number" id="starting" placeholder="Starting Number" /> @*I should add error message if first number is higher than ending number!*@
 
-			<input type="number" id="ending" placeholder="Ending Number" /><br />
-			<br />
-			<input type="button" value="Iterate" onclick="iterator()" class="btn">
-			<br />
-			<text type="number" id="iteratorResult"> </text>
-			<br />
-			<br />
+            <input type="number" id="ending" placeholder="Ending Number" /><br />
+            <br />
+            <input type="button" value="Iterate" onclick="iterator()" class="btn">
+            <br />
+            <text type="number" id="iteratorResult"> </text>
+            <br />
+            <br />
 
-		</h3>
-	</div>
+        </h3>
+    </div>
 
 </div>
 
 <div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			Simple Math Functions
-			<br />
-			<input type="number" id="1Num" placeholder="First Number" />  <input type="number" id="2Num" placeholder="Second Number" />  <input type="number" id="3Num" placeholder="Third Number" />  <input type="number" id="4Num" placeholder="Fourth Number" />  <input type="number" id="5Num" placeholder="Fifth Number" />
-			<br />
-			<br />
-			<input type="button" value="Lowest Number" onclick="findLeast()" class="btn"> = <text id="resultL"></text>
-			<br />
-			<br />
-			<input type="button" value="Highest Number" onclick="findGreatest()" class="btn"> = <text id="resultG"></text>
-			<br />
-			<br />
-			<input type="button" value="Mean" onclick="findMean()" class="btn"> = <text id="resultM"></text>
-			<br />
-			<br />
-			<input type="button" value="Sum" onclick="findSum()" class="btn"> = <text id="resultS"></text>
-			<br />
-			<br />
-			<input type="button" value="Product" onclick="findProduct()" class="btn"> = <text id="resultP"></text>
-			<br />
-			<br />
+    <div class="col-md-12 well">
+        <h3>
+            Simple Math Functions
+            <br />
+            <input type="number" id="1Num" placeholder="First Number" />  <input type="number" id="2Num" placeholder="Second Number" />  <input type="number" id="3Num" placeholder="Third Number" />  <input type="number" id="4Num" placeholder="Fourth Number" />  <input type="number" id="5Num" placeholder="Fifth Number" />
+            <br />
+            <br />
+            <input type="button" value="Lowest Number" onclick="findLeast()" class="btn"> = <text id="resultL"></text>
+            <br />
+            <br />
+            <input type="button" value="Highest Number" onclick="findGreatest()" class="btn"> = <text id="resultG"></text>
+            <br />
+            <br />
+            <input type="button" value="Mean" onclick="findMean()" class="btn"> = <text id="resultM"></text>
+            <br />
+            <br />
+            <input type="button" value="Sum" onclick="findSum()" class="btn"> = <text id="resultS"></text>
+            <br />
+            <br />
+            <input type="button" value="Product" onclick="findProduct()" class="btn"> = <text id="resultP"></text>
+            <br />
+            <br />
 
-		</h3>
-	</div>
-
-</div>
-
-
-
-<div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			Find Factorial
-			<br />
-			<br />
-			<input type="number" id="1Fact" placeholder="Enter Number" /><br />
-			<br />
-			<br />
-			<input type="button" value="Find Factorial" onclick="findFactorial()" class="btn"> = <text id="resultF"></text>
-
-
-			<br />
-			<br />
-
-		</h3>
-	</div>
+        </h3>
+    </div>
 
 </div>
 
 
 
 <div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			FizzBuzz Exercise
-			<br />
-			<br />
-			<h4>Input number between 1 to 100 for both boxes.</h4>
-			<br />
-			<input type="number" id="1FizzBuzz" placeholder="Enter Number" /> 	<input type="number" id="2FizzBuzz" placeholder="Enter Number" /><br />
-			<br />
-			<br />
-			<input type="button" value="Generate FizzBuzz" onclick="genFizzBuzz()" class="btn">
-			<br />
-			<br />
-			<text id="resultFizzBuzz"></text>
+    <div class="col-md-12 well">
+        <h3>
+            Find Factorial
+            <br />
+            <br />
+            <input type="number" id="1Fact" placeholder="Enter Number" /><br />
+            <br />
+            <br />
+            <input type="button" value="Find Factorial" onclick="findFactorial()" class="btn"> = <text id="resultF"></text>
 
-		</h3>
-	</div>
+
+            <br />
+            <br />
+
+        </h3>
+    </div>
+
+</div>
+
+
+
+<div class="row">
+    <div class="col-md-12 well">
+        <h3>
+            FizzBuzz Exercise
+            <br />
+            <br />
+            <h4>Input number between 1 to 100 for both boxes.</h4>
+            <br />
+            <input type="number" id="1FizzBuzz" placeholder="Enter Number" /> 	<input type="number" id="2FizzBuzz" placeholder="Enter Number" /><br />
+            <br />
+            <br />
+            <input type="button" value="Generate FizzBuzz" onclick="genFizzBuzz()" class="btn">
+            <br />
+            <br />
+            <text id="resultFizzBuzz"></text>
+
+        </h3>
+    </div>
 
 </div>
 
 
 <div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			Palindrome Check
-			<br />
-			<input type="text" id="word" value="" placeholder="Enter Text"><br>
-			<br />
-			<input type="button" value="Reverse Text" onclick="strReverse()" class="btn"><br>
-			<br />
-			<input type="text" id="resultText2" placeholder="Result" />
+    <div class="col-md-12 well">
+        <h3>
+            Palindrome Check
+            <br />
+            <input type="text" id="word" value="" placeholder="Enter Text"><br>
+            <br />
+            <input type="button" value="Reverse Text" onclick="strReverse()" class="btn"><br>
+            <br />
+            <input type="text" id="resultText2" placeholder="Result" />
 
-			<br />
-			<text type="text" id="resultPalindrome"> </text>
-			<br />
-		</h3>
-	</div>
+            <br />
+            <text type="text" id="resultPalindrome"> </text>
+            <br />
+        </h3>
+    </div>
 
 </div>
 
@@ -225,12 +247,12 @@
 <h4>Print all combinations of a string.</h4>
 <br />
 @*<input type="text" id="string1" value="" placeholder="Enter String"><br>
-	<br />
+    <br />
 
-	<input type="button" value="String Combinations" onclick="strCombination()" class="btn"><br>
-	<br />
-	<br />
-	<p type="text" id="resultCombo"> </p>*@
+    <input type="button" value="String Combinations" onclick="strCombination()" class="btn"><br>
+    <br />
+    <br />
+    <p type="text" id="resultCombo"> </p>*@
 
 <br />
 <input type="text" id="string5" value="" placeholder="Enter String"><br>
@@ -253,8 +275,8 @@
 
 
 @*Write a function that prints all combinations of a string.
-	Example string : 'pie'
-	Expected Output : p,pi,pie,i,ie,e*@
+    Example string : 'pie'
+    Expected Output : p,pi,pie,i,ie,e*@
 
 
 <br />
@@ -268,23 +290,23 @@
 
 
 <div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			Capitalize Each Word
-			<br />
-			<br />
-			<input type="text" id="string20" value="" placeholder="Enter String"><br>
-			<br />
+    <div class="col-md-12 well">
+        <h3>
+            Capitalize Each Word
+            <br />
+            <br />
+            <input type="text" id="string20" value="" placeholder="Enter String"><br>
+            <br />
 
-			<input type="button" value="Capitalize" onclick="strUpCas()" class="btn"><br>
-			<br />
-			<text type="text" id="resultUpCas"> </text>
+            <input type="button" value="Capitalize" onclick="strUpCas()" class="btn"><br>
+            <br />
+            <text type="text" id="resultUpCas"> </text>
 
-			<br />
-			<br />
+            <br />
+            <br />
 
-		</h3>
-	</div>
+        </h3>
+    </div>
 
 </div>
 
@@ -292,19 +314,19 @@
 
 
 <div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			Find First Character that Does Not Repeat
-			<br />
-			<input type="text" id="string30" value="" placeholder="Enter String"><br>
-			<br />
+    <div class="col-md-12 well">
+        <h3>
+            Find First Character that Does Not Repeat
+            <br />
+            <input type="text" id="string30" value="" placeholder="Enter String"><br>
+            <br />
 
-			<input type="button" value="Result" onclick="strNotRepeat()" class="btn">  <text type="text" id="resultNotRepeat"> </text>
-			<br />
-			<br />
+            <input type="button" value="Result" onclick="strNotRepeat()" class="btn">  <text type="text" id="resultNotRepeat"> </text>
+            <br />
+            <br />
 
-		</h3>
-	</div>
+        </h3>
+    </div>
 
 </div>
 
@@ -313,18 +335,18 @@
 
 
 <div class="row">
-	<div class="col-md-12 well">
-		<h3>
-			Generate Random ID
-			<br />
-			<input type="number" id="stringId" value="" placeholder="Enter Number"><br>
-			<br />
+    <div class="col-md-12 well">
+        <h3>
+            Generate Random ID
+            <br />
+            <input type="number" id="stringId" value="" placeholder="Enter Number"><br>
+            <br />
 
-			<input type="button" value="Generate ID" onclick="strRanId()" class="btn">    <text type="string" id="resultRanId"> </text>
-			<br />
+            <input type="button" value="Generate ID" onclick="strRanId()" class="btn">    <text type="string" id="resultRanId"> </text>
+            <br />
 
-		</h3>
-	</div>
+        </h3>
+    </div>
 
 </div>
 
@@ -369,7 +391,7 @@
 
             There will only ever be one unique solution and the list of available weights will not be empty. It is also possible to add two weights to only one side of the scale to balance it. If it is not possible to balance the scale then your program should return the string not possible.
             <br />
-            <input type="number" id="scaleBalance" value="" placeholder="Enter weights ("[3,4]","[1,2,7,7]" "><br>
+            <input type="number" id="scaleBalance" value="" placeholder="Enter weights (" [3,4]","[1,2,7,7]" "><br>
             <br />
 
             <input type="button" value="Find Balance" onclick="ScaleBalance()" class="btn">    <text type="string" id="resultScaleBalance"> </text>
@@ -461,7 +483,40 @@
 
 
 
+    function currentDayTime() {
 
+        var today = new Date();
+        var day = today.getDay();
+        var daylist = ["Sunday", "Monday", "Tuesday", "Wednesday ", "Thursday", "Friday", "Saturday"];
+        //console.log("Today is : " + daylist[day] + ".");
+        var hour = today.getHours();
+        var minute = today.getMinutes();
+        var second = today.getSeconds();
+        var prepand = (hour >= 12) ? " PM " : " AM ";
+        hour = (hour >= 12) ? hour - 12 : hour;
+        if (hour === 0 && prepand === ' PM ') {
+            if (minute === 0 && second === 0) {
+                hour = 12;
+                prepand = ' Noon';
+            }
+            else {
+                hour = 12;
+                prepand = ' PM';
+            }
+        }
+        if (hour === 0 && prepand === ' AM ') {
+            if (minute === 0 && second === 0) {
+                hour = 12;
+                prepand = ' Midnight';
+            }
+            else {
+                hour = 12;
+                prepand = ' AM';
+            }
+        }
+        document.getElementById("currentDateTime").innerHTML = ("Today is : " + daylist[day] + ". Current Time : " + hour + prepand + " : " + minute + " : " + second);
+
+    }
 
 
 
@@ -543,7 +598,7 @@
 	//					<input type="text" id="avg">
 	//						<script type"text/javascript">>
 
-    
+
 	function findSum() {
 		var value1 = Number(document.getElementById("1Num").value);
 		var value2 = Number(document.getElementById("2Num").value);
@@ -846,7 +901,7 @@
 		var str = document.getElementById('string30').value;
 
 		var arra1 = str.split('');
-		var result = ''; 
+		var result = '';
 		var ctr = 0;
 
 		for (var x = 0; x < arra1.length; x++) {
@@ -938,7 +993,7 @@
     //        <br />
     function LongestWord() {
         var sentence = document.getElementById('stringLongestWord').value;
-        
+
         // we use the regex match function which searches the string for the
         // pattern and returns an array of strings it finds
         // in our case the pattern we define below returns words with
@@ -968,7 +1023,7 @@
     //        <br />
 
     function ConvertHours() {
- 
+
         var convertHour = Number(document.getElementById("intTime").value);
 
         var remainder = convertHour % 60;
@@ -1039,7 +1094,7 @@
         var leftWeight = weightsOnScale[0];
         var rightWeight = weightsOnScale[1];
 
-        // try only one weight    
+        // try only one weight
         for (var i = 0; i < weights.length; i++) {
             if (leftWeight < rightWeight) {
                 if (leftWeight + weights[i] === rightWeight)
@@ -1049,7 +1104,7 @@
                     return weights[i];
             }
         }
-        // now try two weights            
+        // now try two weights
         for (var i = 0; i < weights.length; i++) {
             for (var j = i + 1; j < weights.length; j++) {
                 // add one on each side
@@ -1075,7 +1130,7 @@
         return 'not possible';
     }
 
-    // keep this function call here 
+    // keep this function call here
     ScaleBalancing(readline());
 
 
@@ -1142,7 +1197,7 @@
         return flag;
     }
 
-    // keep this function call here 
+    // keep this function call here
     QuestionsMarks(readline());
 
 
@@ -1159,13 +1214,13 @@
 
 
 @*function fizzbuzz() {
-	var fval = Number(fizzNum.value);
-	var bval = Number(buzzNum.value);
-	var result ="";
+    var fval = Number(fizzNum.value);
+    var bval = Number(buzzNum.value);
+    var result ="";
 
-	for (var i = 1; i <= 100; i++)
-	{
-		if(i % fval === 0 )
-		result += i;*@
+    for (var i = 1; i <= 100; i++)
+    {
+        if(i % fval === 0 )
+        result += i;*@
 
 
