@@ -72,7 +72,7 @@
 
         <h2>
 
-            @*( <input type="number" id="fNum" placeholder="Enter Number" /> + <input type="number" id="sNum" placeholder="Enter Number" /> ) / <input type="number" id="tNum" placeholder="Enter Number" /> =*@ <text type="string" id="currentDateTime"></text>
+            <text type="string" id="currentDayTime"></text>
             <br />
             <br />
             <input type="button" value="Day and Time" onclick="currentDayTime()" class="btn">
@@ -104,7 +104,7 @@
 </div>
 <br />
 
-<div class="row">
+@*<div class="row">
     <div class="col-md-12 well">
         <h3>
             Swap two numbers.
@@ -118,7 +118,7 @@
         </h3>
     </div>
 
-</div>
+</div>*@
 
 
 
@@ -514,7 +514,7 @@
                 prepand = ' AM';
             }
         }
-        document.getElementById("currentDateTime").innerHTML = ("Today is : " + daylist[day] + ". Current Time : " + hour + prepand + " : " + minute + " : " + second);
+        document.getElementById("currentDayTime").innerHTML = ("Today is : " + daylist[day] + ". Current Time : " + hour + prepand + " : " + minute + " : " + second);
 
     }
 
@@ -535,7 +535,7 @@
     //    <input type="button" value="Swap" onclick="SwapNumbers()" class="btn">    <text type="string" id="resultSwapNumber"> </text>
     //        <br />
 
-    function SwapNumbers
+    //function SwapNumbers
 
 	function iterator() {
 		var value1 = Number(document.getElementById("starting").value);
