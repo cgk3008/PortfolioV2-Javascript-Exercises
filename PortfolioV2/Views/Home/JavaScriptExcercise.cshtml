@@ -62,6 +62,24 @@
 
 
 
+<div class="row">
+    <div class="col-md-12 well">
+        <h1>THUNDERSTRUCK</h1>
+        <input type="number" id="fThunder" placeholder="Enter Participants" />
+        <br />
+        <br />
+        <text type="number" id="resultThunder1"></text>
+        <text type="text" id="resultThunder2"></text>
+        <br />
+        <br />
+        <input type="button" value="Calculate" onclick="thunder()" class="btn">
+        <br />
+        <br />
+    </div>
+
+</div>
+<br />
+
 
 <div class="row">
     <div class="col-md-12 well">
@@ -105,20 +123,20 @@
 <br />
 
 @*<div class="row">
-    <div class="col-md-12 well">
-        <h3>
-            Swap two numbers.
-            <br />
-            <input type="number" id="swapNumbers" value="" placeholder="Enter two numbers with comma (" [3,4] "><br>
-            <br />
+        <div class="col-md-12 well">
+            <h3>
+                Swap two numbers.
+                <br />
+                <input type="number" id="swapNumbers" value="" placeholder="Enter two numbers with comma (" [3,4] "><br>
+                <br />
 
-            <input type="button" value="Swap" onclick="SwapNumbers()" class="btn">    <text type="string" id="resultSwapNumber"> </text>
-            <br />
+                <input type="button" value="Swap" onclick="SwapNumbers()" class="btn">    <text type="string" id="resultSwapNumber"> </text>
+                <br />
 
-        </h3>
-    </div>
+            </h3>
+        </div>
 
-</div>*@
+    </div>*@
 
 
 
@@ -684,7 +702,7 @@
 			}
 			//document.getElementById("resultFizzBuzz").innerHTML = resultB;
 
-			else /*(i % value1 != 0 && i % value2 != 0)*/ { /*did not need the argument since using else statement. just need else { resultN += i + " "; }*/
+			else /*(i % playerNum != 0 && i % value2 != 0)*/ { /*did not need the argument since using else statement. just need else { resultN += i + " "; }*/
 				resultN += i + " ";
 			}
 
@@ -1209,6 +1227,66 @@
 
     // keep this function call here
     QuestionsMarks(readline());
+
+
+
+
+
+
+
+    function thunder() {
+        var playerNum = Number(document.getElementById("fThunder").value);
+
+        var drinker1 = 0;
+        var drinker2 = 0;
+        var drinker3 = 0;
+        var array1 = [drinker1, drinker2, drinker3];
+        var result2 = "Enter number from 2 to 34!";
+
+        if (playerNum < 2 || playerNum > 34)
+        {
+
+            document.getElementById("resultThunder2").innerHTML = result2;
+        }
+
+
+        else 
+        {
+
+
+            //  hmm just hitting first one then does not go to others, should do a foreach and iterate through numbers!
+            if (16 % playerNum == 0 && 20 % playerNum == 0 && 24 % playerNum == 0) {
+                drinker1 = playerNum;
+                drinker2 = playerNum;
+                drinker3 = playerNum;
+            }
+            else {
+                drinker1 = Math.Round((16 % playerNum) * playerNum);
+            }
+
+            if (20 %  playerNum == 0) {
+                drinker2 = playerNum;
+            }
+            else {
+                drinker2 = Math.Round((20 % playerNum) * playerNum);
+            }
+
+            if (24 % playerNum == 0) {
+                drinker3 = playerNum;
+            }
+            else {
+                drinker3 = Math.Round((24 % playerNum) * playerNum);
+            }
+
+            result1 = array1;
+
+            document.getElementById("resultThunder1").innerHTML = result1;
+        }
+
+        
+        
+
+    }
 
 
 
