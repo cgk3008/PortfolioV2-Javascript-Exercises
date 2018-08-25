@@ -674,7 +674,20 @@
 		}
 		document.getElementById("resultF").innerHTML = value1;
 
-	}
+    }
+    //////super short factorial code
+    ////  static int factorial(int n) {
+
+
+    ////    if (n <= 1) {
+    ////        return 1;
+    ////    }
+    ////    else {
+    ////        return n * factorial(n - 1);
+    ////    }
+
+    ////}
+
 
 
 
@@ -1240,51 +1253,46 @@
         var drinker1 = 0;
         var drinker2 = 0;
         var drinker3 = 0;
-        var array1 = [drinker1, drinker2, drinker3];
+        var array1 =  [drinker1, drinker2, drinker3];
+
         var result2 = "Enter number from 2 to 34!";
 
         if (playerNum < 2 || playerNum > 34)
         {
-
             document.getElementById("resultThunder2").innerHTML = result2;
         }
 
-
-        else 
-        {
-
-
-            //  hmm just hitting first one then does not go to others, should do a foreach and iterate through numbers!
-            if (16 % playerNum == 0 && 20 % playerNum == 0 && 24 % playerNum == 0) {
+        else
+        {       
+            if (16 % playerNum != 0) {
+                drinker1 = 16 % playerNum;
+            }
+            else {
                 drinker1 = playerNum;
-                drinker2 = playerNum;
-                drinker3 = playerNum;
-            }
-            else {
-                drinker1 = Math.Round((16 % playerNum) * playerNum);
             }
 
-            if (20 %  playerNum == 0) {
+            if (20 % playerNum != 0) {
+                drinker2 = 20 % playerNum;
+            }
+            else {
                 drinker2 = playerNum;
             }
-            else {
-                drinker2 = Math.Round((20 % playerNum) * playerNum);
-            }
 
-            if (24 % playerNum == 0) {
+            if (24 % playerNum != 0) {
+                drinker3 = 24 % playerNum;
+            }
+            else {
                 drinker3 = playerNum;
             }
-            else {
-                drinker3 = Math.Round((24 % playerNum) * playerNum);
-            }
-
+            
+            var array1 = [drinker1, drinker2, drinker3];
             result1 = array1;
 
             document.getElementById("resultThunder1").innerHTML = result1;
         }
 
-        
-        
+
+
 
     }
 
